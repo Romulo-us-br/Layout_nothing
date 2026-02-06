@@ -1,0 +1,28 @@
+@mixin page-grid {
+  --columns: 2;
+  --paddline:20px;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  padding-inline:var(--paddline);
+  @include on-tablet {
+    --columns: 6;
+    --paddline:40px;
+  }
+
+  @include on-desktop {
+    --columns: 12;
+    --paddline:120px;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width:1260px) {
+    @content;
+  }
+}
+
+@mixin on-tablet {
+  @media(min-width:744px) {
+    @content;
+  }
+}
