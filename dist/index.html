@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teste Sass</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -11,22 +12,31 @@
   <header class="header" id="header">
     <div class="header__menu">
       <div class="header__menu-logo">
-        <img src="images/icons/logo.png" alt="" class="header__menu-logo-img">
+        <img src="images/icons/logo.png" alt="" class="header__menu-logo-img logo">
       </div>
       <div class="header__menu-right">
-        <img src="images/icons/phone-icon.png" alt="" class="icon">
-        <a href="#menu">
-          <img src="images/icons/menu-icon.png" alt="" class="icon">
-        </a>
+        <div class="header__menu-right-phone">
+          <a href="tel:+1 234 5555-55-55" class="header__menu-right-phone-on-desktop link link-phone">tel:+1 234
+            5555-55-55 </a>
+          <img src="images/icons/phone-icon.png" alt="" class="icon" id="link-phone">
+        </div>
+        <div class="header__menu-right-menu">
+          <a href="#menu">
+            <span class="icon icon-menu"></span>
+          </a>
+        </div>
+
       </div>
     </div>
     <div class="header-content">
-      <h1 class="header-content-title">Bring joy back to the everyday</h1>
+      <h1 class="header-content-h1title">Bring joy back to the everyday</h1>
     </div>
+
+    <!-- #region menusobreposto -->
     <div class="menu menupage" id="menu">
       <div class="menupage-menu">
         <div class="menupage-menu-logo">
-          <img src="images/icons/logo.png" alt="" class="menupage-menu-logo-img">
+          <img src="images/icons/logo.png" alt="" class="menupage-menu-logo-img logo">
         </div>
         <div class="menupage-menu-right">
           <a href="#header">
@@ -38,16 +48,16 @@
         <nav class="menupage-content-nav">
           <ul class="menupage-content-nav-ul">
             <li class="menupage-content-nav-ul-li">
-              <a href="#" class="link">Products</a>
+              <a href="#" class="link link-menu">Products</a>
             </li>
             <li class="menupage-content-nav-ul-li">
-              <a href="#" class="link">Store</a>
+              <a href="#" class="link link-menu">Store</a>
             </li>
             <li class="menupage-content-nav-ul-li">
-              <a href="#" class="link">Login</a>
+              <a href="#" class="link link-menu">Login</a>
             </li>
             <li class="menupage-content-nav-ul-li">
-              <a href="#" class="link">Cart [0]</a>
+              <a href="#" class="link link-menu">Cart [0]</a>
             </li>
           </ul>
         </nav>
@@ -55,16 +65,179 @@
       <div class="menupage-contact">
         <ul>
           <li>
-            <a href="tel:+1 234 5555-55-55" class="link">+1 234 5555-55-55</a>
+            <a href="tel:+1 234 5555-55-55" class="link link-menu">+1 234 5555-55-55</a>
           </li>
           <li>
-            <a href="#contact" class="link callOrder">call to order</a>
+            <a href="#contact" class="link callOrder link-menu">call to order</a>
           </li>
         </ul>
       </div>
 
     </div>
+    <!-- #endregion menusobreposto -->
+
   </header>
+  <main class="main">
+    <!-- #region recommended -->
+    <section class="recommended" id="recommended">
+      <div class="recommended-title">
+        <h2 class="recommended-title-h2">Recommended</h2>
+      </div>
+      <div class="recommended__container">
+        <!-- #region r01 -->
+        <div class="recommended__container-content">
+          <div class="recommended__container-content-background">
+            <img src="/dist/images/recommended/recommended-01.png" alt="produto 1 de recomendação"
+              class="recommended__container-content-background-img">
+          </div>
+          <div class="recommended__container-content-desc">
+            <h3 class="recommended__container-content-desc-h3title">Phone (1)</h3>
+            <p class="recommended__container-content-desc-info">
+              Designed with instinct, to bring joy back to the everyday. Through the Glyph Interface, a perfected OS and
+              exceptional dual camera. All startlingly fast.
+            </p>
+            <div class="recommended__container-content-desc-price">
+              $ 499.00
+            </div>
+          </div>
+        </div>
+        <!-- #endregion r01 -->
+        <!-- #region r02 -->
+        <div class="recommended__container-content">
+          <div class="recommended__container-content-background">
+            <img src="/dist/images/recommended/recommended-02.png" alt="produto 1 de recomendação"
+              class="recommended__container-content-background-img">
+          </div>
+          <div class="recommended__container-content-desc">
+            <h3 class="recommended__container-content-desc-h3title">Ear (2)</h3>
+            <p class="recommended__container-content-desc-info">
+              Perfecting the path from artist to ear. So that music sounds just as it was intended.
+            </p>
+            <div class="recommended__container-content-desc-price">
+              $ 149.00
+            </div>
+          </div>
+        </div>
+        <!-- #endregion r02 -->
+        <!-- #region r03 -->
+        <div class="recommended__container-content">
+          <div class="recommended__container-content-background">
+            <img src="/dist/images/recommended/recommended-03.png" alt="produto 1 de recomendação"
+              class="recommended__container-content-background-img">
+          </div>
+          <div class="recommended__container-content-desc">
+            <h3 class="recommended__container-content-desc-h3title">Ear (Stick)</h3>
+            <p class="recommended__container-content-desc-info">
+              Tech you can’t feel. Leaving just space for sound to come to life. Powered by custom sound technology.
+            </p>
+            <div class="recommended__container-content-desc-price">
+              $ 119.00 </div>
+          </div>
+        </div>
+        <!-- #endregionr03 -->
+      </div>
+    </section>
+    <!-- #endregion recommended -->
+    <section class="category">
+      <div class="category-title">
+        <h2 class="category-title-h2title">
+          Browse Nothing products by category
+        </h2>
+      </div>
+      <div class="category__container">
+        <!-- #region category c01 -->
+        <div class="category__container-content">
+          <div class="category__container-content-background">
+            <img src="images/category/category01-1.png" class="category__container-content-background-img" alt="">
+            <img src="images/category/category01-2.png" alt="" class="category__container-content-background-img">
+          </div>
+          <a href="#" class="link category-link">
+            <h4>All products</h4>
+          </a>
+        </div>
+        <!-- #endregion c01 -->
+
+        <!-- #region category c02 -->
+        <div class="category__container-content">
+          <div class="category__container-content-background">
+            <img src="images/category/category02-1.png" class="category__container-content-background-img" alt="">
+            <img src="images/category/category02-2.png" alt="" class="category__container-content-background-img">
+          </div>
+          <a href="#" class="link category-link">
+            <h4>Audio</h4>
+          </a>
+        </div>
+        <!-- #endregion -->
+
+        <!-- #region category c03 -->
+        <div class="category__container-content">
+          <div class="category__container-content-background">
+            <img src="images/category/category03-1.png" class="category__container-content-background-img" alt="">
+            <img src="images/category/category03-2.png" alt="" class="category__container-content-background-img">
+          </div>
+          <a href="#" class="link category-link">
+            <h4>Acessories</h4>
+          </a>
+        </div>
+        <!-- #endregion -->
+
+      </div>
+      <button class="category-button">View All</button>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-background">
+        <img src="images/background/background-about.png" alt="" class="about-background-img">
+      </div>
+      <div class="about-content">
+        <h3 class="about-content-h3title">
+          About
+        </h3>
+        <p class="about-content-info">We’re a London-based tech company on a mission to remove barriers between people and technology.
+        </p>
+        
+        <p class="about-content-info">To do this, we’re crafting intuitive, flawlessly connected products that improve
+          our lives without getting in the way.
+          No confusing tech-speak. No silly product names. Just artistry, passion and trust. And products we’re proud to
+          share with our friends and family. Simple.</p>        
+
+        <p class="about-content-info">Because beautiful tech shouldn’t be complicated.</p>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="contact-title">
+        <h3 class="contact-title-h3title">
+          Contact Us
+        </h3>
+      </div>
+      <form class="contact-form">
+        <input type="text" class="contact-form-input" placeholder="Nome">
+        <input type="text" class="contact-form-input" placeholder="Email">
+        <textarea name="message" placeholder="Message" class="contact-form-textarea"></textarea>
+        <button class="contact-form-button">Send</button>
+      </form>
+    </section>
+    <footer class="footer" id="footer">
+      <div class="footer-contact">
+        <p class="footer-contact-title">
+          Phone
+        </p>
+        <a href="tel:+1 234 5555-55-55" class="footer-contact-link link">+1 234 5555-55-55</a>
+      </div>
+       <div class="footer-contact">
+        <p class="footer-contact-title">
+          Email
+        </p>
+        <a href="mailto:hello@nothing.com" class="footer-contact-link link">hello@nothing.com</a>
+      </div>
+       <div class="footer-contact">
+        <p class="footer-contact-title">
+          Address
+        </p>
+        <a href="#" class="footer-contact-link link-footer">400 first ave.<br> suite 700 <br> Minneapolis, MN 55401</a>
+      </div>
+    </footer>
+  </main>
 </body>
 
 </html>

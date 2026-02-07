@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  padding-bottom: 4px;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.link:hover {
+  transform: scale(1.1);
+}
+
+.icon-menu {
+  background-image: url(/dist/images/icons/menu-icon.png);
+  transition: transform 0.3s ease;
+}
+.icon-menu:hover {
+  background-image: url(/dist/images/icons/menu-icon-hover.png);
+  transform: scale(1.1);
+}
+
+.logo {
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.2);
+}
+
+.link-footer {
+  text-decoration: none;
+  color: black;
+}
+
+/*# sourceMappingURL=base.css.map */

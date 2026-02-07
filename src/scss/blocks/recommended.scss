@@ -1,0 +1,41 @@
+.recommended {
+  @include page-grid;
+  padding-block: 120px;
+
+  &-title {
+    grid-column: 1/-1;
+
+    &-h2 {}
+  }
+
+  &__container {
+    grid-column: 1/-1;
+    gap: 56px;
+    display: grid;
+
+    &-content {
+      grid-column: 1/-1;
+
+      &-background {
+        padding-bottom: 24px;
+
+        &-img {
+          width: 100%;
+        }
+      }
+
+      &-desc {
+        &-h3title {}
+
+        &-info {
+          padding-block: 8px 12px;
+        }
+
+        &-price {}
+      }
+    }
+
+  }
+
+
+}

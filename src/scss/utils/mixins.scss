@@ -1,0 +1,94 @@
+@mixin on-desktop {
+  @media (min-width:1260px) {
+    @content;
+  }
+}
+
+@mixin on-tablet {
+  @media(min-width:744px) {
+    @content;
+  }
+}
+
+@mixin off-tablet {
+  @media (max-width: 1259px) {
+    @content;
+  }
+}
+
+@mixin page-grid {
+  --columns: 2;
+  --paddline: 20px;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  padding-inline: var(--paddline);
+
+  @include on-tablet {
+    --columns: 6;
+    --paddline: 40px;
+  }
+
+  @include on-desktop {
+    --columns: 12;
+    --paddline: 120px;
+  }
+}
+
+@mixin margin-negative {
+  margin-inline: -20px;
+
+  @include on-tablet {
+    margin-inline: -40px;
+  }
+
+  @include on-desktop {
+    margin-inline: -120px;
+  }
+}
+
+// stilos
+
+@mixin button {
+  height: 56px;
+  text-align: center;
+  border-radius: 8px;
+  border: none;
+  @include button-style;
+}
+
+@mixin button-style {
+  font-family: 'Space Grotesk';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+
+
+@mixin input-style {
+  font-family: 'Space mono';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+
+  &::placeholder {
+    color: #7E7E83;
+
+  }
+}
+
+@mixin mono-400b {
+  font-family: 'space mono';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #191919;
+}
+
+@mixin grotesk-400gray{
+      font-family: 'space grotesk';
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #9393A3;
+}

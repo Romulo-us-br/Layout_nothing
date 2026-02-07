@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  padding-bottom: 4px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black; // Cor de destaque da KAT VR
+
+    // O segredo da animação:
+    transform: scaleX(0); // Começa com largura zero
+    transform-origin: right; // Encolhe para a direita
+    transition: transform 0.3s ease;
+  }
+
+  &:hover::after {
+    transform: scaleX(1); // Ganha largura total
+    transform-origin: left; // Expande a partir da esquerda
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.icon-menu {
+  background-image: url(/dist/images/icons/menu-icon.png);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    background-image: url(/dist/images/icons/menu-icon-hover.png);
+    transform: scale(1.1);
+  }
+}
+
+.logo {
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.link-footer{
+  text-decoration: none;
+  color:black;
+}
