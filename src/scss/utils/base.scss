@@ -22,10 +22,12 @@ body {
 
 .link {
   text-decoration: none;
+  display: inline-flex;
   color: black;
   position: relative;
   padding-bottom: 4px;
-
+  width: fit-content;
+  
   &::after {
     content: '';
     position: absolute;
@@ -72,4 +74,9 @@ body {
 .link-footer{
   text-decoration: none;
   color:black;
+}
+
+.li{
+  padding-bottom: 8px;
+  list-style: none;
 }

@@ -4,34 +4,56 @@
 
   &-title {
     grid-column: 1/-1;
+    padding-bottom: 40px;
 
-    &-h2 {}
+    &-h2 {
+      @include h2style;
+    }
   }
 
   &__container {
     grid-column: 1/-1;
-    gap: 56px;
     display: grid;
+    // Troque subgrid por isso:
+    grid-template-columns: repeat(3, 1fr);
+    gap: 56px;
 
     &-content {
       grid-column: 1/-1;
+      display: grid;
+
+      @include on-desktop {
+        grid-column: auto;
+      }
 
       &-background {
-        padding-bottom: 24px;
+        // ESTRATÉGIA: O container dita o tamanho, não a imagem.
+        width: 100%;
+        aspect-ratio: 1 / 1; 
+        overflow: hidden;
+        margin-bottom: 24px; // Substitui o padding-bottom para evitar cálculos de box-sizing
 
         &-img {
+          display: block;
           width: 100%;
+          height: 100%;     // Força a imagem a preencher o quadrado perfeito
+          object-fit: cover; // Corta a imagem sem distorcer para caber no 1:1
         }
       }
 
       &-desc {
-        &-h3title {}
+        &-h3title {
+          @include h3style;
+        }
 
         &-info {
           padding-block: 8px 12px;
+          @include normaltext-style;
         }
 
-        &-price {}
+        &-price {
+          @include number-style;
+        }
       }
     }
 

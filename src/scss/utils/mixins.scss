@@ -77,7 +77,8 @@
   }
 }
 
-@mixin mono-400b {
+// footer title
+@mixin normaltext-style {
   font-family: 'space mono';
   font-weight: 400;
   font-size: 16px;
@@ -85,10 +86,67 @@
   color: #191919;
 }
 
-@mixin grotesk-400gray{
-      font-family: 'space grotesk';
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 140%;
-      color: #9393A3;
+// footer link
+@mixin grotesk-400gray {
+  font-family: 'space grotesk';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #9393A3;
+}
+
+@mixin h1style {
+  @include grotesk;
+  font-size: 36px;
+
+  @include on-tablet {
+    font-size: 48px;
+  }
+  @include on-desktop{
+    font-size: 56px;
+  }
+}
+
+@mixin h2style {
+  @include grotesk;
+  font-size: 32px;
+  @include on-tablet{
+    font-size: 40px;
+  }
+  @include on-desktop{
+    font-size: 48px;
+  }
+}
+
+@mixin menustyle {
+  @include grotesk;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+@mixin submenu-style {
+  @include grotesk;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@mixin h3style {
+  @include grotesk;
+  line-height: 140%;
+  font-size: 18px;
+}
+
+@mixin number-style {
+  @include grotesk;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+@mixin grotesk {
+  font-family: 'Space Grotesk';
+  font-weight: 700;
+  line-height: 100%;
+  color: #292929;
 }

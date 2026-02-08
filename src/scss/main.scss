@@ -68,6 +68,7 @@
 
     &-h1title {
       padding-block: 40px;
+      @include h1style;
     }
   }
 
@@ -129,7 +130,7 @@
         flex-direction: column;
 
         &-li {
-          font-style: italic;
+          @include menustyle;
         }
       }
     }
@@ -142,6 +143,9 @@
       gap: 20px;
       display: flex;
       flex-direction: column;
+      &>li{
+        @include submenu-style;
+      }
     }
 
   }

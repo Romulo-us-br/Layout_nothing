@@ -6,6 +6,9 @@
   &-title {
     grid-column: 1/-1;
 
+    &-h2title {
+      @include h2style;
+    }
   }
 
   &__container {
@@ -17,7 +20,39 @@
       grid-column: 1/-1;
       display: grid;
       grid-template-columns: subgrid;
+      padding-bottom: 40px;
 
+      @include on-tablet {
+        padding-bottom: 56px;
+
+        &:nth-child(2) {
+          .category__container-content-background-img {
+            grid-column: span 2;
+
+            &:nth-child(2) {
+              grid-column: span 4;
+            }
+          }
+        }
+      }
+
+      @include on-desktop {
+        &:nth-child(2) {
+          .category__container-content-background-img {
+            grid-column: span 4;
+
+            &:nth-child(2) {
+              grid-column: span 8;
+            }
+          }
+        }
+      }
+
+      &-title {
+        grid-column: 1/-1;
+        @include h3style;
+        text-wrap: nowrap;
+      }
 
       &-background {
         display: grid;
@@ -31,6 +66,25 @@
           width: 100%;
           height: 130px;
           grid-column: span 1;
+          border-radius: 8px;
+
+          @include on-tablet {
+            height: 224px;
+            grid-column: span 4;
+
+            &:nth-child(2) {
+              grid-column: span 2;
+            }
+          }
+
+          @include on-desktop {
+            height: 324px;
+            grid-column: span 8;
+
+            &:nth-child(2) {
+              grid-column: span 4;
+            }
+          }
         }
       }
     }
@@ -39,8 +93,7 @@
   &-button {
     grid-column: 1/-1;
     @include button;
-    color:#fff;
+    color: #fff;
     background-color: #292929;
   }
 }
-
